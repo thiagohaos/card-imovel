@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Casa Moderna | Thiago Haos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <div class="card">
-        <img src="./assets/beautiful-building-exterior-design.jpg" alt="Casa Moderna" class="imagem-card">
+        <!--Container do Carrossel-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./assets/image 1.jpg" alt="Casa Moderna"></div>
+            <div class="swiper-slide"><img src="./assets/image 2.jpeg" alt="Quarto 1"></div>
+            <div class="swiper-slide"><img src="./assets/image 3.jpeg" alt="Quarto 2"></div>
+            <div class="swiper-slide"><img src="./assets/image 4.jpeg" alt="Cozinha"></div>
+            </div>
+        <!--Botões de navegação-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        </div>
         <div class="conteudo">
             <h2>Casa Grande</h2>
             <p class="descricao">⭐ 4.9 (73 avaliações)</p>
@@ -30,11 +43,25 @@
             <button class="tags">Piscina</button>
             <button class="tags">Varanda</button>
         </p2>
-        <h3 class="preco">R$ 4100,00</h3>
+        <h3 class="preco">R$ 4.100,00</h3>
         <div class="contato">
-            <button class="btn green">Agendar Visita</button>
+            <button class="btn blue">Agendar Visita</button>
             <button class="btn">Contatar Corretor</button>
         </div>
-    </div>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    </script>    
 </body>
 </html>
